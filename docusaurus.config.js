@@ -66,7 +66,7 @@ const config = {
         // Options here
       },
     ],
-    [
+    /*[
       
       './github',
       {
@@ -74,7 +74,7 @@ const config = {
         outputDir: '', // Sostituisci 'output' con il percorso della cartella di output desiderata
         token: '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'
       }
-    ]
+    ]*/
   ],
 
   themeConfig:
