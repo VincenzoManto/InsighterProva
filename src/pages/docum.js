@@ -17,7 +17,7 @@ const DocumentationPage = () => {
         .then(data => {
           setSidebar(data.sidebar);
         })
-        .catch(error => {
+        .catch(error => { 
           console.error('Error fetching sidebar:', error);
         });
     }
