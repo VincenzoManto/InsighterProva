@@ -13,7 +13,7 @@ const DocumentationPage = () => {
     if (owner && repo) {
       // Fetch sidebar configuration from backend API
       fetch(`/api/docs?owner=${owner}&repo=${repo}`)
-        .then(response => response.json())
+        .then(response => response.json()) 
         .then(data => {
           setSidebar(data.sidebar);
         })
