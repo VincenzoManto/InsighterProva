@@ -60,21 +60,6 @@ const config = {
     ],
   ],
   plugins: [
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        // Options here
-      },
-    ],
-    /*[
-      
-      './github',
-      {
-        baseUrl: 'VincenzoManto/InsighterProva', // Sostituisci con l'URL del tuo repository GitHub
-        outputDir: '', // Sostituisci 'output' con il percorso della cartella di output desiderata
-        token: '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'
-      }
-    ]*/
   ],
 
   themeConfig:
