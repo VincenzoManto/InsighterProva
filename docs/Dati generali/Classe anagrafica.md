@@ -1,0 +1,24 @@
+###### Fai clic su **Nuovo**  
+
+###### Compila il campo di input **Codice**  
+
+###### Compila il campo di input **Descrizione**  
+
+###### Compila il campo di input **DataTras**  
+
+###### Compilare il campo di input **CoClasse**  
+
+###### Fai clic su **Salva**  
+
+###### Fare clic su **intestazione cella**  
+
+###### Compila il campo di input **input della cella di intestazione**  
+
+###### Fai clic sulla **riga**  
+
+###### Fai clic su **Salva**  
+
+FAQ
+---
+
+...

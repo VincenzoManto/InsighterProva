@@ -1,0 +1,77 @@
+UFRVisuale�">UFR Visuale�
+-------------------------
+
+Il sistema UnifiedFrameworkReporting (UFR) si basa su due entit� fondamentali: le dashboard e le stampe. Le dashboard (`DashboardHeaderDto`) possono contenere una o pi� stampe (`ReportDataCodeDto`). Queste stampe possono essere di vario tipo, generalmente derivate da comandi SQL, dataset o servizi. Esse vengono visualizzate come tabelle, grafici Echarts o pivot, a seconda delle esigenze.�
+
+Ogni visualizzazione richiede dati specifici.�
+
+Tabelle
+-------
+
+Per la visualizzazione delle tabelle, si fa uso del componente `stark-advanced-table`. I dati vengono ottenuti simulando un tableservice. � necessario dichiarare l'ambito dei campi (`$$Fields$$`), i filtri di `where clause` generici (`$$Filter$$`) o i placeholders (`$$<nome>$$`), e il paging per la paginazione (`$$Paging$$`). Si tenga presente che l'ordinamento viene incluso nel campo lista d'ordinamento specifico (OrderList).�
+
+Le tabelle usano un sistema di visualizzazione simile ai GUIContract standard chiamati ReportDataCodeGuiDto che permette ad ogni utente di personalizzare le colonne, pinnare, spostare e ridimensionare.�
+
+Le tabelle possono essere esportate tramite ReportDataCode/export-table�
+
+Grafici
+-------
+
+Per quanto riguarda i grafici Echarts, si utilizza il componente FE `app-chart`. Le query utilizzano principalmente `$$Filter$$` o placeholders, utilizzando determinati alias per il corretto funzionamento.�
+
+Ogni grafico ha il suo endpoint che resituisce una struttura Contract specifica per le esigenze di echarts. � il FE a rimappare tale contract sulle option della libreria, fatta eccezione per il grafico complesso ove le option vengono generate direttamente dal SqlScript del Report tramite eval().�
+
+Pivot
+-----
+
+I pivot rappresentano uno strumento fondamentale all'interno del sistema UnifiedFrameworkReporting (UFR), consentendo la visualizzazione e l'analisi dinamica dei dati su diverse dimensioni e misure. Questa funzionalit� � gestita attraverso l'utilizzo del componente flexmonster, il quale offre potenti strumenti per l'organizzazione e la manipolazione dei dati.�Questi elementi consentono la riorganizzazione dinamica dei dati su diverse dimensioni e misure. Le dimensioni vengono inserite come PivotRows o PivotColumn, mentre le misure come PivotValues. I pivot sono gestiti tramite il componente FE `app-pivot-table`.�
+
+Filtri report
+-------------
+
+I filtri giocano un ruolo fondamentale nell'interazione con i dati e vengono iniettati direttamente nella query per filtrare i risultati in base alle specifiche necessit�. Ogni filtro (ReportDataCodeFilterDto) ha un nome univoco, una tabella di injection che generalmente corrisponde all'alias della tabella utilizzata nella query del report, un nome del campo, un tipo di dato che condiziona le operazioni disponibili e un tipo di filtro.�
+
+I filtri possono essere di tre tipologie:�
+
+1.  Inserimento libero: consentono all'utente di inserire manualmente il valore del filtro.�
+2.  Inserimento tabellato sul servizio: richiedono l'interazione con un controller per ottenere i valori dei filtri da una tabella di lookup.�
+3.  Inserimento tabellato tramite script query: la query deve dichiarare un campo valore e un campo descrizione, oltre a supportare i placeholder per il paging e i filtri.�
+
+� possibile anche definire filtri preimpostati, il cui valore viene generato da query specifiche che restituiscono una sola colonna di risultati denominata "row".�
+
+I filtri, una volta valorizzati dall'utente, vengono concatenati per formare la clausola where ($$Filter$$), fungendo da condizioni AND.�
+
+I filtri possono anche essere collegati a placeholder, permettendo l'inserimento di clausole specifiche e individuali in diverse parti della query del report, utile quando filtri diversi devono operare su punti diversi della query anzich� in un'unica clausola $$Filter$$.�
+
+I filtri vengono gestiti da stark-advanced-linear-filter e possono essere nascosti sui singoli report se contenuti in una dashboard con HideFilters = true�
+
+_Esempio_�
+
+Ho 2 filtri chiamati Area e Nazione lavoranti sulla tabella Tab�
+
+Se injecto $$Filter$$ avr�:�
+
+where 1=1 and Tab.CdArea = 1 and Tab.CdNazione = 'IT'�
+
+Se connetto ai filtri anche 2 placeholder ($$Area$$, $$Nazione$$):�
+
+$$Area$$: Tab.CdArea = 1�  
+  
+$$Nazione$$: Tab.CdNazione = 'IT'�
+
+Potendo quindi scrivere cose come:�  
+select \* from X where $$Area$$�  
+  
+Union all�  
+  
+Select \* from Y where $$Nazione$$�
+
+Filtri dashboard
+----------------
+
+La connessione tra i filtri della dashboard e quelli dei report avviene solo quando hanno lo stesso nome. � quindi necessario garantire che i nomi corrispondano per una corretta connessione e filtraggio. Se si desidera avere un set di filtri unificato per l'intera dashboard, � necessario copiare i filtri dei report anche nella definizione della dashboard (DashboardFilterDto).�
+
+FAQ
+---
+
+...
