@@ -5,16 +5,15 @@ description: UFR
 UFRVisuale ">UFR Visuale 
 -------------------------
 
-Il sistema UnifiedFrameworkReporting (UFR) si basa su due entità fondamentali: le dashboard e le stampe. Le dashboard (\`DashboardHeaderDto\`) possono contenere una o più stampe (\`ReportDataCodeDto\`). Queste stampe possono essere di vario tipo, generalmente derivate da comandi SQL, dataset o servizi. Esse vengono visualizzate come tabelle, grafici Echarts o pivot, a seconda delle esigenze. 
+Il sistema UnifiedFrameworkReporting (UFR) si basa su due entità fondamentali: le dashboard e le stampe. Le dashboard (`DashboardHeaderDto`) possono contenere una o più stampe (`ReportDataCodeDto`). Queste stampe possono essere di vario tipo, generalmente derivate da comandi SQL, dataset o servizi. Esse vengono visualizzate come tabelle, grafici Echarts o pivot, a seconda delle esigenze. 
 
 Ogni visualizzazione richiede dati specifici. 
 
-![](assets/MTcwOTI0MDU0Njk1MQ==.png)
 
 Tabelle
 -------
 
-Per la visualizzazione delle tabelle, si fa uso del componente \`stark-advanced-table\`. I dati vengono ottenuti simulando un tableservice. È necessario dichiarare l'ambito dei campi (\`$$Fields$$\`), i filtri di \`where clause\` generici (\`$$Filter$$\`) o i placeholders (\`$$<nome>$$\`), e il paging per la paginazione (\`$$Paging$$\`). Si tenga presente che l'ordinamento viene incluso nel campo lista d'ordinamento specifico (OrderList). 
+Per la visualizzazione delle tabelle, si fa uso del componente `stark-advanced-table`. I dati vengono ottenuti simulando un tableservice. È necessario dichiarare l'ambito dei campi (`$$Fields$$`), i filtri di `where clause` generici (`$$Filter$$`) o i placeholders (`$$<nome>$$`), e il paging per la paginazione (`$$Paging$$`). Si tenga presente che l'ordinamento viene incluso nel campo lista d'ordinamento specifico (OrderList). 
 
 Le tabelle usano un sistema di visualizzazione simile ai GUIContract standard chiamati ReportDataCodeGuiDto che permette ad ogni utente di personalizzare le colonne, pinnare, spostare e ridimensionare. 
 
@@ -23,14 +22,14 @@ Le tabelle possono essere esportate tramite ReportDataCode/export-table 
 Grafici
 -------
 
-Per quanto riguarda i grafici Echarts, si utilizza il componente FE \`app-chart\`. Le query utilizzano principalmente \`$$Filter$$\` o placeholders, utilizzando determinati alias per il corretto funzionamento. 
+Per quanto riguarda i grafici Echarts, si utilizza il componente FE `app-chart`. Le query utilizzano principalmente `$$Filter$$` o placeholders, utilizzando determinati alias per il corretto funzionamento. 
 
 Ogni grafico ha il suo endpoint che resituisce una struttura Contract specifica per le esigenze di echarts. È il FE a rimappare tale contract sulle option della libreria, fatta eccezione per il grafico complesso ove le option vengono generate direttamente dal SqlScript del Report tramite eval(). 
 
 Pivot
 -----
 
-I pivot rappresentano uno strumento fondamentale all'interno del sistema UnifiedFrameworkReporting (UFR), consentendo la visualizzazione e l'analisi dinamica dei dati su diverse dimensioni e misure. Questa funzionalità è gestita attraverso l'utilizzo del componente flexmonster, il quale offre potenti strumenti per l'organizzazione e la manipolazione dei dati. Questi elementi consentono la riorganizzazione dinamica dei dati su diverse dimensioni e misure. Le dimensioni vengono inserite come PivotRows o PivotColumn, mentre le misure come PivotValues. I pivot sono gestiti tramite il componente FE \`app-pivot-table\`. 
+I pivot rappresentano uno strumento fondamentale all'interno del sistema UnifiedFrameworkReporting (UFR), consentendo la visualizzazione e l'analisi dinamica dei dati su diverse dimensioni e misure. Questa funzionalità è gestita attraverso l'utilizzo del componente flexmonster, il quale offre potenti strumenti per l'organizzazione e la manipolazione dei dati. Questi elementi consentono la riorganizzazione dinamica dei dati su diverse dimensioni e misure. Le dimensioni vengono inserite come PivotRows o PivotColumn, mentre le misure come PivotValues. I pivot sono gestiti tramite il componente FE `app-pivot-table`. 
 
 Filtri report
 -------------
