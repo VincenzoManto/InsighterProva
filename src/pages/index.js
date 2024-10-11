@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import { Blocks } from "../components/Blocks";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
 
 const FeatureList = [
   {
@@ -40,19 +40,13 @@ const FeatureList = [
 
 
 
-const pageData = require("../../config/homepage/index.json");
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+  // Initialize the CMS object
 
   return (
     <Layout
-      title={pageData && pageData.title ? pageData.title : siteConfig.title}
-      description={
-        pageData && pageData.description
-          ? pageData.description
-          : siteConfig.tagline
-      }
     >
       <div class="index-content">
     <section class="section pb-0">

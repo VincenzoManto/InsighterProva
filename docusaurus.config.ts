@@ -1,7 +1,5 @@
 const docusaurusData = require("./config/docusaurus/index.json");
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const getDocId = (doc) => {
   return doc
@@ -32,7 +30,7 @@ const formatFooterItem = (item) => {
       }),
     };
   } else {
-    let linkObject = {
+    let linkObject: any = {
       label: item.label,
     };
 
@@ -49,7 +47,7 @@ const formatFooterItem = (item) => {
 };
 
 const formatNavbarItem = (item, subnav = false) => {
-  let navItem = {
+  let navItem: any = {
     label: item.label,
   };
 
@@ -88,7 +86,7 @@ const formatNavbarItem = (item, subnav = false) => {
 const config = {
   title: docusaurusData.title || "My Site",
   tagline: docusaurusData.tagline || "Dinosaurs are cool",
-  url: docusaurusData.url || "https://tinasaurus.vercel.app/",
+  url: docusaurusData.url,
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -108,7 +106,18 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: docusaurusData.url + "/admin/#/collections/doc",
+          editUrl: docusaurusData.editUrl,
+        },
+        blog: {
+          showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          editUrl: docusaurusData.editUrl,
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -142,10 +151,6 @@ const config = {
         copyright:
           `Copyright © ${new Date().getFullYear()} ` +
           (docusaurusData.footer?.copyright || docusaurusData.title),
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
       },
     }),
 };

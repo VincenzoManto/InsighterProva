@@ -8,9 +8,15 @@
       "position": "left"
     },
     {
-      "label": "Insighter",
+      "label": "Blog",
+      "link": "blog",
+      "externalLink": "/blog",
+      "position": "left"
+    },
+    {
+      "label": "Edit",
       "link": "external",
-      "externalLink": "/admin/",
+      "externalLink": "/",
       "position": "right"
     }
   ],
@@ -18,6 +24,7 @@
     "alt": "Insighter",
     "src": "https://www.superiorgames.eu/insighter/insighter/assets/images/logo-white.png"
   },
+  "editUrl": "https://github.com/VincenzoManto/InsighterProva/edit/master",
   "title": "Insighter",
   "footer": {
     "style": "light",
@@ -49,5 +56,5 @@
     ],
     "copyright": "Built with Insighter + Docusaurus."
   },
-  "url": "https://Insighters.vercel.app/"
+  "url": "http://localhost:3000"
 }
