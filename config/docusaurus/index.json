@@ -4,7 +4,7 @@
     {
       "label": "Docs",
       "link": "doc",
-      "docLink": "docs/intro.mdx",
+      "docLink": "docs/Introduction.mdx",
       "position": "left"
     },
     {
@@ -24,7 +24,7 @@
     "alt": "Insighter",
     "src": "https://www.superiorgames.eu/insighter/insighter/assets/images/logo-white.png"
   },
-  "editUrl": "https://github.com/VincenzoManto/InsighterProva/edit/master",
+  "editUrl": "https://app.dhub.dev/c/vincmantos-projects/insighterprova-m60uu",
   "title": "Insighter",
   "footer": {
     "style": "light",
