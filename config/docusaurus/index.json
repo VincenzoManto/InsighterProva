@@ -34,7 +34,7 @@
         "items": [
           {
             "label": "Introduction",
-            "to": "docs/intro.mdx",
+            "to": "docs/Introduction.mdx",
             "_template": "internal"
           }
         ]
