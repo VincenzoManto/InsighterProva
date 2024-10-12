@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master # Change this to your default branch if it's different
+      - gh-pages # Change this to your default branch if it's different
 
 jobs:
   deploy:
