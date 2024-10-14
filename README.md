@@ -1,3 +1,7 @@
+---
+title: Stagioni
+description: Stagioni
+---
 Here\'s the updated `README.md` with the information about the GitHub Actions workflow \(`deploy.yml`\) and the logos for **Insighter** and **Docusaurus** at the beginning\.
 
 ---
@@ -48,7 +52,7 @@ This repository contains the setup for a **Docusaurus** site enhanced with **Ins
 
 - **Automated Deployment**\: Deployment is managed by a `deploy.yml` GitHub Actions workflow triggered by changes in the `build` branch\.
 
-## Prerequisites
+## Prerequisites 1
 
 - **Node\.js** and **npm** installed on your machine\.
 
