@@ -1,12 +1,10 @@
 name: Release on build
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
-  create-pull-request:
+  create-and-merge-pull-request:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -18,11 +16,26 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Create Pull Request
+        id: create_pr  # Salva l'output per utilizzarlo successivamente
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: build
           head: master
           title: "Merge master into build"
-          body: "This PR was created automatically to merge changes from master into build."
+          body: "This PR was created and merged automatically."
           branch: "pr-master-to-build"
+
+      # Aspetta qualche secondo per permettere la creazione della PR
+      - name: Wait for PR creation
+        run: sleep 10
+
+      - name: Merge Pull Request
+        run: |
+          PR_NUMBER=$(gh pr list --state=open --head=pr-master-to-build --json number --jq '.[0].number')
+          if [ -n "$PR_NUMBER" ]; then
+            gh pr merge $PR_NUMBER --merge --admin --delete-branch --confirm
+          else
+            echo "No open PR found to merge."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
