@@ -21,11 +21,11 @@
     }
   ],
   "logo": {
-    "alt": "Insighter",
-    "src": "https://www.superiorgames.eu/insighter/insighter/assets/images/logo-white.png"
+    "alt": "4Seasons Next Edition",
+    "src": "img/logo.png"
   },
   "editUrl": "https://insightest.app/apps/gitten/#/pages/VincenzoManto/InsighterProva/",
-  "title": "Insighter",
+  "title": "4Seasons Next Edition",
   "footer": {
     "style": "light",
     "links": [
