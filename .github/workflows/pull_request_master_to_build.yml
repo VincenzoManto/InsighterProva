@@ -21,7 +21,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: build
-          head: master
+          head: origin/master
           title: "Merge master into build"
           body: "This PR was created and merged automatically."
           branch: "pr-master-to-build"
