@@ -31,5 +31,6 @@ jobs:
             gh pr merge $PR_NUMBER --merge --admin --delete-branch --confirm
           else
             echo "No open PR found to merge."
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
