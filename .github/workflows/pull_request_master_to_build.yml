@@ -15,16 +15,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create Pull Request
-        id: create_pr  # Salva l'output per utilizzarlo successivamente
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: build
-          head: origin/master
-          title: "Merge master into build"
-          body: "This PR was created and merged automatically."
-          branch: "pr-master-to-build"
+      - name: create pull request
+        run: gh pr create -B build -H master --title 'Merge master into build' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Aspetta qualche secondo per permettere la creazione della PR
       - name: Wait for PR creation
