@@ -1,4 +1,7 @@
 on:
+  pull_request:
+    types:
+      - closed
   push:
     branches:
       - build # Change this to your default branch if it's different
