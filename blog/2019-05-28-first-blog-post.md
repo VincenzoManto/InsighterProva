@@ -2,7 +2,7 @@
 slug: 2\.6\.507\.2442\.1\.0\.1745\.0
 title: Release note 2\.6\.507\.2442\.1\.0\.1745\.0
 authors: 4sne
-tags: [release note]
+tags: [4sne]
 ---
 # Release note 2\.6\.507\.2442\.1\.0\.1745\.0
 
@@ -12,7 +12,9 @@ tags: [release note]
 
 La seguente versione **2\.6\.507\.2442\.1\.0\.1745\.0** del 16\/10\/2024 riporta i seguenti aggiornamenti
 
---truncate--
+```html
+<!-- truncate -->
+```
 
 &nbsp;
 
