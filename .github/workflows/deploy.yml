@@ -1,7 +1,5 @@
 on:
-  pull_request:
-    types:
-      - closed
+  workflow_dispatch:
   push:
     branches:
       - build # Change this to your default branch if it's different
