@@ -12,7 +12,7 @@ tags: [release note]
 
 La seguente versione **2\.6\.507\.2442\.1\.0\.1745\.0** del 16\/10\/2024 riporta i seguenti aggiornamenti
 
-&nbsp;
+--truncate--
 
 &nbsp;
 
