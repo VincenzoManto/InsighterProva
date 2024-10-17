@@ -35,3 +35,12 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Trigger another workflow via API
+        run: |
+          curl -X POST \
+          -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/actions/workflows/87786988/dispatches \
+          -d '{"ref":"build"}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
