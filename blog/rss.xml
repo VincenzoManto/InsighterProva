@@ -74,15 +74,80 @@
             <category>Docusaurus</category>
         </item>
         <item>
-            <title><![CDATA[First Blog Post]]></title>
-            <link>http://localhost:3000/blog/first-blog-post</link>
-            <guid>http://localhost:3000/blog/first-blog-post</guid>
+            <title><![CDATA[Tipi nota]]></title>
+            <link>http://localhost:3000/blog/2019/05/28/first-blog-post</link>
+            <guid>http://localhost:3000/blog/2019/05/28/first-blog-post</guid>
             <pubDate>Tue, 28 May 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[Lorem ipsum dolor sit amet...]]></description>
-            <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
-<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
-            <category>Hola</category>
-            <category>Docusaurus</category>
+            <description><![CDATA[Tipi nota]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4seasons-next">4Seasons Next<a href="http://localhost:3000/blog/2019/05/28/first-blog-post#4seasons-next" class="hash-link" aria-label="Direct link to 4Seasons Next" title="Direct link to 4Seasons Next">​</a></h3>
+<p>&nbsp;</p>
+<p>La seguente versione <strong>2.6.507.2442.1.0.1745.0</strong> del 16/10/2024 riporta i seguenti aggiornamenti</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Aggiornamenti:</p>
+<h1>12</h1>
+<p>La versione di aggiornamento dati include adattamenti nei decimali per la gestione costi, il recupero automatico del tipo documento di spedizione in Ordine Cliente, la configurazione dei totali di pagina per i campi numerici, miglioramenti nella funzione listini in valuta e recupero prezzi, possibilit di cancellare righe materiali da documenti fornitori non definitivi, e correzioni riguardanti i prezzi a 0 sulle righe materiali. Altre modifiche riguardano il filtro stagioni di vendita, l'aggiunta di riferimenti articolo nei risultati, correzione di bug legati alla selezione dei risultati, aggiunta di filtro sui colori, modali di collegamento per le prime 4 tendine sui documenti fornitori, e miglioramenti nella velocit di caricamento delle Abilitazioni Clienti Crm.</p>
+<p>&nbsp;</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="release-notes">Release notes<a href="http://localhost:3000/blog/2019/05/28/first-blog-post#release-notes" class="hash-link" aria-label="Direct link to Release notes" title="Direct link to Release notes">​</a></h5>
+<ol>
+<li>
+<p>In gestione costi di distinta base, il numero massimo di decimali  stato adattato allo standard di 2</p>
+</li>
+<li>
+<p>Il lancio manuale del semilavorato articolo (modello SEMILAVORATO) propone ora una qta decimale e non la grid delle taglie</p>
+</li>
+<li>
+<p>Ordine Cliente: recuperato in automatico il tipo documento di spedizione dal cliente (prioritario) o dal tipo ordine, sia in fase di creazione dell'ordine sia in modifica con apposito alert di sovrascrittura.</p>
+</li>
+<li>
+<p>Ora  possibile configurare e visualizzare i totali di pagina per i campi numerici in tutte le griglie dell'applicativo. I totali scorrono automaticamente seguendo l'allineamento del campo totalizzato (pinned). L'operazione supportata ad oggi  la somma aritmetica.</p>
+</li>
+<li>
+<p>La funzione listini in valuta recupera ora solo i listini di partenza.</p>
+</li>
+<li>
+<p>Il calcolo del listino nuovo prima funzionava solo con incrementi % ora abbiamo sistemato anche il valore fisso e valore in aggiunta.</p>
+</li>
+<li>
+<p>Recupero Prezzi in creazione OdA da Fabbisogno da ArticoliListini (nuova gestione listini Articoli).</p>
+</li>
+<li>
+<p>In base al tipo ordine fornitore selezionato recupera il prezzo prod. o campionario.</p>
+</li>
+<li>
+<p>Aggiunta possibilit di cancellare le righe materiali da un documento fornitore non definitivo</p>
+</li>
+<li>
+<p>In documenti cliente, il tipo magazzino in entrata ed uscita vengono presentati a vuoto di default</p>
+</li>
+<li>
+<p>Sistemata la verifica dei prezzi a 0 sulle righe materiale, solo se  il flaga Righe A Zero del Tipo documento  valorizzato.</p>
+</li>
+<li>
+<p>Modifica che verifica sia in FE con un allert  in visuale quando si va in documenti da preparare e non permette la selezione</p>
+</li>
+<li>
+<p>Sia BE se per qualsiasi motivo in controllo FE non va in porto c' quello BE che non permette la creazione di documenti con righe materiali e prezzo 0</p>
+</li>
+<li>
+<p>fix filtro stagioni di vendita</p>
+</li>
+<li>
+<p>aggiunti riferimento articolo (codice e descrizione) nei risultati</p>
+</li>
+<li>
+<p>trovati alcuni bug legati alla selezione dei risultati, il fix quindi riguarda il modo in cui i dati vengono passati dal front-end. Tutte le funzioni massive sono affette da questa modifica. Una volta spostati nella pagina delle funzioni non  pi possibile selezionare o deselezionare i record, per farlo occorre tornare nella pagina dei filtri. Una volta completata l'operazione (esito ok) la pagina viene ricaricata.</p>
+</li>
+<li>
+<p>Aggiunto filtro sulle select nuovo colore in modo che vengano visualizzati solo i colori appartenenti alla cartella selezionata.</p>
+</li>
+<li>
+<p>Aggiunti i modali di collegamento per le prime 4 tendine sui documenti fornitori</p>
+</li>
+<li>
+<p>Sistemazione velocita di caricamento delle Abilitazione Clienti Crm e sistemaizone della duplica cosi da riportarsi il vari flag sul nuovo duplicato</p>
+</li>
+</ol>]]></content:encoded>
         </item>
     </channel>
 </rss>
