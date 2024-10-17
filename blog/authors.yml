@@ -1,23 +1,10 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+4sne:
+  name: 4SNE
+  title: 4SNE @ SYS-DAT
+  url: https://www.sys-datgroup.com/
+  image_url: https://media.licdn.com/dms/image/v2/C4D0BAQEeTMGFYZBoqw/company-logo_200_200/company-logo_200_200/0/1662625438626/sys_dat_spa_logo?e=2147483647&v=beta&t=jaYXLv6GIepKEApmqQgfduEq5qMb7HAaRfgPpez1xbs
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    x: https://www.sys-datgroup.com/
+    github: https://www.sys-datgroup.com/
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
