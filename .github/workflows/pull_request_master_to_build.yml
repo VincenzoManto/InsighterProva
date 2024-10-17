@@ -26,7 +26,8 @@ jobs:
 
       - name: Merge Pull Request
         run: |
-          PR_NUMBER=$(gh pr list --state=open --head=pr-master-to-build --json number --jq '.[0].number')
+          PR_NUMBER=$(gh pr list --state=open --head=pr-master-to-build --json)
+          echo PR_NUMBER
           if [ -n "$PR_NUMBER" ]; then
             gh pr merge $PR_NUMBER --merge --admin --delete-branch --confirm
           else
