@@ -22,7 +22,7 @@ jobs:
 
       # Aspetta qualche secondo per permettere la creazione della PR
       - name: Wait for PR creation
-        run: sleep 10
+        run: sleep 2
 
       - name: Merge Pull Request
         run: |
