@@ -1,7 +1,7 @@
 ---
 slug: long-blog-post
 title: Long Blog Post
-authors: 4sne
+authors: [4sne]
 tags: [4sne]
 ---
 
