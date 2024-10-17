@@ -1,0 +1,37 @@
+name: Release on build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-and-merge-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: create pull request
+        run: gh pr create -B build -H master --title 'Merge master into build' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Aspetta qualche secondo per permettere la creazione della PR
+      - name: Wait for PR creation
+        run: sleep 2
+
+      - name: Merge Pull Request
+        run: |
+          PR_NUMBER=$(gh pr list --state=open --json number --jq '.[0].number')
+          echo $PR_NUMBER
+          if [ -n "$PR_NUMBER" ]; then
+            gh pr merge $PR_NUMBER --merge --admin
+          else
+            echo "No open PR found to merge."
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
