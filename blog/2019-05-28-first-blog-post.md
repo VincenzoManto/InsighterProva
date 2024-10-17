@@ -1,6 +1,8 @@
 ---
-title: Tipi nota
-description: Tipi nota
+slug: 2\.6\.507\.2442\.1\.0\.1745\.0
+title: Release note 2\.6\.507\.2442\.1\.0\.1745\.0
+authors: 4sne
+tags: [release note]
 ---
 # Release note 2\.6\.507\.2442\.1\.0\.1745\.0
 
@@ -10,7 +12,7 @@ description: Tipi nota
 
 La seguente versione **2\.6\.507\.2442\.1\.0\.1745\.0** del 16\/10\/2024 riporta i seguenti aggiornamenti
 
-&nbsp;
+--truncate--
 
 &nbsp;
 
