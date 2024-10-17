@@ -2,7 +2,7 @@
 slug: 2\.6\.507\.2442\.1\.0\.1745\.0
 title: Release note 2\.6\.507\.2442\.1\.0\.1745\.0
 authors: 4sne
-tags: [release note]
+tags: [4sne]
 ---
 # Release note 2\.6\.507\.2442\.1\.0\.1745\.0
 
